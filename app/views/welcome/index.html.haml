@@ -1,0 +1,48 @@
+%section#header
+  .row
+    .container
+      - if flash[:error]
+        .alert.alert-danger
+          %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
+          = flash[:error]
+      - elsif flash[:info]
+        .alert.alert-info
+          %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
+          = flash[:info]
+      - elsif flash[:alert]
+        .alert.alert-info
+          %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
+          = flash[:alert]
+      - elsif flash[:notice]
+        .alert.alert-success
+          %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
+          = flash[:notice]
+
+    .twelve.columns.centered
+      %h1.fade1.logo
+        = image_tag 'Gramr_main_logo_white.png', width: "200", alt: "Logo"
+      %h2.fade2 Website Coming Soon
+%section#signup
+  .row
+    .fade3.seven.columns.centered
+      %h3 Be the first to know about the gratitude movement!
+
+      = form_for Message.new, method: :post do |f|
+        .eight.columns
+          = f.email_field :email, placeholder: "YOUR E-MAIL PLEASE ?"
+        .four.columns
+          = f.submit "Submit"
+
+    .seven.columns.centered.text-center.fade3.social
+      .three.columns.text-center
+        %a{href: "http://instagram.com/gramrgratitude", target: "_blank"}
+          %i.icon.fa.fa-instagram.fa-fw
+      .three.columns.text-center
+        %a{href: "https://twitter.com/gramrgratitude", target: "_blank"}
+          %i.icon.fa.fa-twitter.fa-fw
+      .three.columns.text-center
+        %a{href: "https://www.facebook.com/gramrgratitude", target: "_blank"}
+          %i.icon.fa.fa-facebook.fa-fw
+      .three.columns.text-center
+        %a{href: "http://www.pinterest.com/gramrgratitude/", target: "_blank"}
+          %i.icon.fa.fa-pinterest.fa-fw
