@@ -9,5 +9,36 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require_tree
  */
+
+.alert {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: latolight, sans-serif;
+  padding: 15px;
+  margin-bottom: 21px;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+.alert-success {
+  color: rgb(0, 169, 151);
+  background-color: white;
+  border-color: white;
+}
+
+.alert-dismissable {
+  padding-right: 35px;
+}
+
+.alert-success {
+  color: rgb(0, 169, 151);
+  background-color: white;
+  border-color: #3c9a5f;
+}
+
+.alert-error {
+  color: white;
+  background-color: #ea2f10;
+  border-color: #ea2f10;
+}

@@ -1,22 +1,21 @@
 %section#header
   .row
-    .container
-      - if flash[:error]
-        .alert.alert-danger
-          %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
-          = flash[:error]
-      - elsif flash[:info]
-        .alert.alert-info
-          %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
-          = flash[:info]
-      - elsif flash[:alert]
-        .alert.alert-info
-          %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
-          = flash[:alert]
-      - elsif flash[:notice]
-        .alert.alert-success
-          %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
-          = flash[:notice]
+    - if flash[:error]
+      .alert.alert-danger
+        %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
+        = flash[:error]
+    - elsif flash[:info]
+      .alert.alert-info
+        %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
+        = flash[:info]
+    - elsif flash[:alert]
+      .alert.alert-info
+        %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
+        = flash[:alert]
+    - elsif flash[:notice]
+      .alert.alert-success
+        %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
+        = flash[:notice]
 
     .twelve.columns.centered
       %h1.fade1.logo
@@ -35,14 +34,18 @@
 
     .seven.columns.centered.text-center.fade3.social
       .three.columns.text-center
-        %a{href: "http://instagram.com/gramrgratitude", target: "_blank"}
-          %i.icon.fa.fa-instagram.fa-fw
+        = link_to "http://instagram.com/gramrgratitude", target: "_blank" do
+          %span
+            %i.fa.fa-instagram.fa-fw 
       .three.columns.text-center
-        %a{href: "https://twitter.com/gramrgratitude", target: "_blank"}
-          %i.icon.fa.fa-twitter.fa-fw
+        = link_to "https://twitter.com/gramrgratitude", target: "_blank" do
+          %span
+            %i.fa.fa-twitter.fa-fw 
       .three.columns.text-center
-        %a{href: "https://www.facebook.com/gramrgratitude", target: "_blank"}
-          %i.icon.fa.fa-facebook.fa-fw
+        = link_to "https://www.facebook.com/gramrgratitude", target: "_blank" do
+          %span
+            %i.fa.fa-facebook.fa-fw 
       .three.columns.text-center
-        %a{href: "http://www.pinterest.com/gramrgratitude/", target: "_blank"}
-          %i.icon.fa.fa-pinterest.fa-fw
+        = link_to "http://www.pinterest.com/gramrgratitude/", target: "_blank" do
+          %span
+            %i.fa.fa-pinterest.fa-fw 
