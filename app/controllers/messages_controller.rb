@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
 
   def create
-    email = params[:message][:email]
-    @message = Message.new(email: email)
+    email = params[:message]
+    @message = Message.new(email: email[:email])
 
     if @message.save
       flash[:notice] = "Email saved. Prepare to be gratituded"

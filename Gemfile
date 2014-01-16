@@ -18,10 +18,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'thin'
 gem 'haml'
 gem 'haml-rails'
 
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
+
 gem 'font-awesome-sass'
