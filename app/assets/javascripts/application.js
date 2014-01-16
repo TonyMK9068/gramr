@@ -12,11 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require yeti/loader
+//= require yeti/bootswatch
 //= require classie.js
-//= require jquery-1.9.1.min.js
-//= require jquery.scrollto.js
 //= require main.js
-//= require modernizr-2.5.3.min.js
 //= require modernizr-2.6.2.min.js
 //= require plugins.js
 

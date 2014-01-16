@@ -1,51 +1,35 @@
-%section#header
+.container
   .row
-    - if flash[:error]
-      .alert.alert-danger
-        %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
-        = flash[:error]
-    - elsif flash[:info]
-      .alert.alert-info
-        %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
-        = flash[:info]
-    - elsif flash[:alert]
-      .alert.alert-info
-        %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
-        = flash[:alert]
-    - elsif flash[:notice]
-      .alert.alert-success
-        %button{:type => "button", :class => "close", :data => {:dismiss => "alert"}} &times;
-        = flash[:notice]
-
-    .twelve.columns.centered
+    .page-header.col-xs-12.col-lg-12
       %h1.fade1.logo
         = image_tag 'Gramr_main_logo_white.png', width: "200", alt: "Logo"
       %h2.fade2 Website Coming Soon
-%section#signup
-  .row
-    .fade3.seven.columns.centered
-      %h3 Be the first to know about the gratitude movement!
 
-      = form_for Message.new, method: :post do |f|
-        .eight.columns
-          = f.email_field :email, placeholder: "YOUR E-MAIL PLEASE ?"
-        .four.columns
-          = f.submit "Submit"
+  .row#signup
+    .row
+      .fade3.col-lg-7
+        %h3 Be the first to know about the gratitude movement!
+        
+        = form_for Message.new, method: :post, class: "inline-form" do |f|
+          .form-group.col-lg-8
+            = f.email_field :email, placeholder: "YOUR E-MAIL PLEASE ?", class: "form-control"
+          .col-lg-4
+            = f.submit "Submit", class: "btb btn-default"
 
-    .seven.columns.centered.text-center.fade3.social
-      .three.columns.text-center
-        = link_to "http://instagram.com/gramrgratitude", target: "_blank" do
-          %span
-            %i.fa.fa-instagram.fa-fw 
-      .three.columns.text-center
-        = link_to "https://twitter.com/gramrgratitude", target: "_blank" do
-          %span
-            %i.fa.fa-twitter.fa-fw 
-      .three.columns.text-center
-        = link_to "https://www.facebook.com/gramrgratitude", target: "_blank" do
-          %span
-            %i.fa.fa-facebook.fa-fw 
-      .three.columns.text-center
-        = link_to "http://www.pinterest.com/gramrgratitude/", target: "_blank" do
-          %span
-            %i.fa.fa-pinterest.fa-fw 
+      .col-lg-7.centered.text-center.fade3.social
+        .col-lg-3.text-center
+          = link_to "http://instagram.com/gramrgratitude", target: "_blank" do
+            %span
+              %i.fa.fa-instagram.fa-fw 
+        .col-lg-3.text-center
+          = link_to "https://twitter.com/gramrgratitude", target: "_blank" do
+            %span
+              %i.fa.fa-twitter.fa-fw 
+        .col-lg-3.text-center
+          = link_to "https://www.facebook.com/gramrgratitude", target: "_blank" do
+            %span
+              %i.fa.fa-facebook.fa-fw 
+        .col-lg-3.text-center
+          = link_to "http://www.pinterest.com/gramrgratitude/", target: "_blank" do
+            %span
+              %i.fa.fa-pinterest.fa-fw 

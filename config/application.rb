@@ -28,7 +28,7 @@ module Gramr
 
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
-    config.assets.precompile += %w( font-awesome.css forms.css grid.css gumby.css metrize.css screen.css style.css welcome.css search.js jquery-1.9.1.min.js jquery.scrollto.js main.js modernizr-2.5.3.min.js modernizr-2.6.2.min.js plugins.js classie.js)
+    config.assets.precompile += %w( font-awesome.css forms.css grid.css gumby.css metrize.css screen.css style.css welcome.css search.js jquery-1.9.1.min.js jquery.scrollto.js main.js modernizr-2.6.2.min.js plugins.js classie.js)
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
