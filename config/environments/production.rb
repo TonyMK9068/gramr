@@ -46,7 +46,7 @@ Gramr::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( font-awesome.css forms.css grid.css gumby.css metrize.css screen.css style.css welcome.css search.js jquery-1.9.1.min.js jquery.scrollto.js main.js modernizr-2.5.3.min.js modernizr-2.6.2.min.js plugins.js classie.js require jquery_ujs require jquery)
+  config.assets.precompile += %w( font-awesome.css forms.css grid.css gumby.css metrize.css screen.css style.css welcome.css search.js jquery-1.9.1.min.js jquery.scrollto.js main.js modernizr-2.5.3.min.js modernizr-2.6.2.min.js plugins.js classie.js)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
