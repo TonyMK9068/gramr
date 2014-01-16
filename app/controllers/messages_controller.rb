@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
       redirect_to root_path
     else
       flash[:error] = "Email not valid"
-      render '/'
+      render 'welcome/index'
     end
   end
 end
