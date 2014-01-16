@@ -25,9 +25,10 @@ module Gramr
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
-    # config.assets.precompile += %w()
+
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
+    config.assets.precompile += %w( font-awesome.css forms.css grid.css gumby.css metrize.css screen.css style.css welcome.css search.js jquery-1.9.1.min.js jquery.scrollto.js main.js modernizr-2.5.3.min.js modernizr-2.6.2.min.js plugins.js classie.js)
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
@@ -42,7 +43,7 @@ module Gramr
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-
+    config.assets.initialize_on_precompile = false
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
