@@ -164,6 +164,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   jquery-ui-rails
+  less-rails
   meta_request
   pg
   rails (= 3.2.16)

@@ -14,9 +14,6 @@
 //= require jquery_ujs
 //= require yeti/loader
 //= require yeti/bootswatch
-//= require classie.js
-//= require main.js
-//= require modernizr-2.6.2.min.js
-//= require plugins.js
+//= require_tree .
 
 

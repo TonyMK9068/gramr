@@ -1,20 +1,19 @@
 .container
   .row
-    .page-header.col-xs-12.col-lg-12
+    #header.col-xs-12.col-lg-12.center-text
       %h1.fade1.logo
         = image_tag 'Gramr_main_logo_white.png', width: "200", alt: "Logo"
       %h2.fade2 Website Coming Soon
 
   .row#signup
     .row
-      .fade3.col-lg-7
+      .fade3.col-lg-offset-3.col-lg-6.center-text
         %h3 Be the first to know about the gratitude movement!
-        
-        = form_for Message.new, method: :post, class: "inline-form" do |f|
-          .form-group.col-lg-8
-            = f.email_field :email, placeholder: "YOUR E-MAIL PLEASE ?", class: "form-control"
-          .col-lg-4
-            = f.submit "Submit", class: "btb btn-default"
+        .col-lg-7
+          = form_for Message.new, method: :post, class: "form" do |f|
+            .row
+              = f.email_field :email, placeholder: "YOUR E-MAIL PLEASE ?", class: "root-page"
+              %span= f.submit "Submit", class: "btn btn-default btn-lg root-page-button"
 
       .col-lg-7.centered.text-center.fade3.social
         .col-lg-3.text-center
