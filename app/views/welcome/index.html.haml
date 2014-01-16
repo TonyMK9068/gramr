@@ -1,4 +1,7 @@
-.container
+- content_for :head do
+  = stylesheet_link_tag 'welcome'
+
+.container.spacer
   .row
     #header.col-xs-12.col-lg-12.center-text
       %h1.fade1.logo
@@ -7,28 +10,26 @@
 
   .row#signup
     .row
-      .fade3.col-lg-offset-3.col-lg-6.center-text
-        %h3 Be the first to know about the gratitude movement!
-        .col-lg-7
-          = form_for Message.new, method: :post, class: "form" do |f|
-            .row
-              = f.email_field :email, placeholder: "YOUR E-MAIL PLEASE ?", class: "root-page"
-              %span= f.submit "Submit", class: "btn btn-default btn-lg root-page-button"
+      .fade3.col-lg-offset-3.col-lg-6.col-sm-offset-2.col-sm-8
+        %h3.center-text Be the first to know about the gratitude movement!
+        = form_for Message.new, method: :post, class: "form" do |f|
+          #email-form-welcome
+            = f.email_field :email, placeholder: "YOUR E-MAIL PLEASE ?", class: "root-page col-sm-12 col-md-7"
+            = f.submit "Send", class: "btn-lg root-page-button col-sm-12 col-md-4"
 
-      .col-lg-7.centered.text-center.fade3.social
-        .col-lg-3.text-center
-          = link_to "http://instagram.com/gramrgratitude", target: "_blank" do
-            %span
-              %i.fa.fa-instagram.fa-fw 
-        .col-lg-3.text-center
-          = link_to "https://twitter.com/gramrgratitude", target: "_blank" do
-            %span
-              %i.fa.fa-twitter.fa-fw 
-        .col-lg-3.text-center
-          = link_to "https://www.facebook.com/gramrgratitude", target: "_blank" do
-            %span
-              %i.fa.fa-facebook.fa-fw 
-        .col-lg-3.text-center
-          = link_to "http://www.pinterest.com/gramrgratitude/", target: "_blank" do
-            %span
-              %i.fa.fa-pinterest.fa-fw 
+    .col-md-offset-2.col-md-8.centered.text-center.fade3.social.spacer
+      .col-lg-3.text-center
+        = link_to "http://instagram.com/gramrgratitude", target: "_blank" do
+          %i.fa.fa-instagram.fa-3x
+      .col-lg-3.text-center
+        = link_to "https://twitter.com/gramrgratitude", target: "_blank" do
+          %span
+            %i.fa.fa-twitter.fa-3x
+      .col-lg-3.text-center
+        = link_to "https://www.facebook.com/gramrgratitude", target: "_blank" do
+          %span
+            %i.fa.fa-facebook.fa-3x
+      .col-lg-3.text-center
+        = link_to "http://www.pinterest.com/gramrgratitude/", target: "_blank" do
+          %span
+            %i.fa.fa-pinterest.fa-3x

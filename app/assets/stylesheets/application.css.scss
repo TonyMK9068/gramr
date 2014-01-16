@@ -1,6 +1,8 @@
 @import 'yeti/loader';
 @import 'yeti/bootswatch';
+@import 'fontawesome';
 
+$green: rgb(0, 169, 151);
 @font-face {
     font-family: 'latoregular';
     src: url('lato-reg-webfont.eot');
@@ -38,7 +40,7 @@
 }
 
 body {
-  background: rgb(0, 169, 151);;
+  background:$green;
 }
 
 h2 {
@@ -54,14 +56,69 @@ h3 {
   padding-top: 0px;
 }
 
+
+
 .center-text {
    text-align: center;
  }
 
 .root-page#message_email {
   height: 55px;
+  margin-left:5px;
+  margin-right:0;
 }
 
-.root-page-button {
-  
+.spacer {
+  margin-top:7%;
+}
+
+h2.fade2 {
+  margin-top:7%;
+}
+
+h1.fade1.logo {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+h3.center-text {
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#email-form-welcome {
+  width:100%;
+  div {
+    display:inline;
+  }
+}
+
+#message_email.root-page {
+  margin-left: 0;
+  margin-right:10px;
+  min-height:59px;
+  height:59px;
+}
+
+a {
+  color:hsl(174, 100%, 29%);
+  %i.fa.fa-3x {
+    border-color: rgb(0, 148, 133);
+    border-style: none;
+    color:hsl(174, 100%, 29%);
+  }
+}
+
+
+input.root-page-button {
+  background-color: none;
+  background: transparent;
+  margin:0;
+  border: 1px solid rgb(255, 255, 255) !important;
+  color: rgb(255, 255, 255);
+  font-family: 'latolight', sans-serif;
+  border-image: none !important;
+  border-style: solid;
+
 }
