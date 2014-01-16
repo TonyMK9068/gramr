@@ -9,6 +9,8 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'meta_request'
 end
 
 group :assets do
@@ -17,11 +19,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
 gem 'thin'
 gem 'haml'
 gem 'haml-rails'
 gem 'font-awesome-sass'
 gem 'twitter-bootswatch-rails', '~> 3.0.2'
 gem 'therubyracer'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'figaro'
+gem 'rails_email_validator'
